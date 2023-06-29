@@ -1,0 +1,80 @@
+<html>
+<head>
+<style> p{
+text-align:center;
+}
+</style>
+<script>
+function display()
+{
+var name=document.getElementById("name").value; 
+var pwd=document.getElementById("pwd").value; 
+var email=document.getElementById("email").value; 
+var loc=document.getElementById("location");
+var loc_val=loc.options[loc.selectedIndex].value;
+var genders = document.getElementsByName("gender"); 
+var selectedGender;
+var sskills = document.getElementsByName("skills"); 
+var selectedSkills=" ";
+for(var i = 0; i < genders.length; i++)
+{
+if(genders[i].checked)
+{
+selectedGender = genders[i].value; 
+break;
+}
+}
+for(var i = 0; i < sskills.length; i++)
+{
+if(sskills[i].checked)
+{
+selectedSkills+=sskills[i].value+ " "
+}
+}
+document.getElementById("p").innerHTML="<h2><br>The following are the details provided by you</h2>Name:"+name+"<br><br>Password:"+pwd+"<br><br>Email:"+email+"<br><br>Location:"+loc_val+"<br><br>Gender:"+selectedGender+"<br><br>Skills:"+selectedSkills;
+
+}
+</script>
+</head>
+<body>
+<form>
+<table align="center">
+<tr>
+<td><h4>Username</h4></td>
+<td><input type="text" id="name"></td>
+</tr>
+<tr>
+<td><h4>Password</h4></td>
+<td><input type="password" id="pwd"></td>
+</tr>
+<tr>
+<td><h4>Gender</h4></td>
+<td><input type="radio" value="male" name="gender" >Male
+<input type="radio" value="female" name="gender" >Female</td>
+</tr>
+<tr>
+<td><h4>Skills</h4></td>
+<td><input type="checkbox" value="C" name="skills">C
+<input type="checkbox" value="C++" name="skills">C++
+<input type="checkbox" value="Java" name="skills">Java</td>
+</tr>
+<tr>
+<td><h4>Location</h4></td>
+<td><select id="location">
+<option value="Hyderabad">Hyderabad</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Delhi">Delhi</option>
+</select></td>
+</tr>
+<tr>
+<td><h4>Email</h4></td>
+<td><input type="text" id="email"></td>
+</tr>
+<tr>
+<td><button type="button" onclick="display()">Display</button></td>
+</tr>
+</table>
+</form>
+<p id="p"></p>
+</body>
+</html>
