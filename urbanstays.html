@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="anygames.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" media="screen and (max-width:1170px)" href="phone.css">
+</head>
+<script>
+
+function display()
+{
+var name=document.getElementById("name").value; 
+var contact=document.getElementById("contact").value; 
+var email=document.getElementById("email").value; 
+var loc=document.getElementById("location");
+var loc_val=loc.options[loc.selectedIndex].value;
+
+document.getElementById("p").innerHTML="<h2><br>The following are the details provided by you</h2>Name:"+name+"<br><br>Contact:"+contact+"<br><br>Location:"+loc_val+"<br><br>Email:"+email;
+
+}
+</script>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+                 <img src="logo.jpg"  alt="not available" >
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Our Services</a></li>
+            <li class="item"><a href="#client-section">Our Hotels</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary ">Elevating travel experiences with unforgettable stays.</h1>
+        
+        <button class="btn">Explore</button>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary section">Our services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_55_660x440.jpg" alt="">
+                <h2 class="h-secondary center">Luxury Suite</h2>
+                <ul>
+                    <li class="licenter">King Bed</li>
+                    <li class="licenter">WiFi</li>
+                    <li class="licenter">Air Conditioning</li>
+                    <li class="licenter">Laundry Service</li>
+                    <li class="licenter">Free Breakfast</li>
+                    <li class="licenter">Pickup and Drop</li>
+                    <li class="licenter">Room Service</li>
+
+                </ul>
+            </div>
+            <div class="box">
+                <img src="https://www.cvent.com/sites/default/files/image/2021-10/hotel%20room%20with%20beachfront%20view.jpg" alt="">
+                <h2 class="h-secondary center">General Suite</h2>
+                <ul >
+                    <li class="licenter">Double Bed</li>
+                    <li class="licenter">WiFi</li>
+                    <li class="licenter">Air Conditioning</li>
+                    <li class="licenter">Room Service</li>
+                </ul> 
+
+            </div>
+            
+        </div>
+    </section>
+    <section class="order_form">
+        <form action = "">
+            <div class = "inputbox">
+                <span> Where </span>
+                <br>
+                <select id="location">
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Delhi">Delhi</option>
+                    </select>
+            </div>
+            <div class = "inputbox">
+                <span> When </span>
+                <br>
+                <input type="date" min="2023-06-27">
+            </div>
+            <div class = "inputbox">
+                <span> time </span>
+                <br>
+                <input type="time" >
+            </div>
+            <input type="submit" value = "Book Now" class = "button">
+            
+            
+        </form>
+    </section>
+<section id="client-section">
+    <h1 class="h-primary section">Our Hotels</h1>
+    <div id="clients">
+        <div class="client-item">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/52/e5/5a/facade.jpg?w=700&h=-1&s=1">
+            <p class="center">Chennai</p>
+        </div>
+        <div class="client-item">
+            <img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201712271350157047-302150be3e8e11ea9cf90242ac110006.jpg">
+            <p class="center">Mumbai</p>
+        </div>
+        <div class="client-item">
+            <img src="https://gos3.ibcdn.com/3ba55d46237311e8b0bb0a4cef95d023.jpg">
+            <p class="center">Bengaluru</p>
+        </div>
+        <div class="client-item">
+            <img src="https://www.tajhotels.com/content/dam/luxury/hotels/Taj_Mahal_Mumbai/images/0ffersimage/Master%20Exterior%20Image.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg">
+            <p class="center">Delhi</p>
+        </div>
+        <div class="client-item">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/df/e1/a3/park-hyatt-hyderabad.jpg?w=700&h=-1&s=1">
+            <p class="center">Hyderabad</p>
+        </div>
+    </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary section">Contact Us</h1>
+        <div id="contact-box">
+            <form id="myForm" action="">
+            
+            
+                <div class="form-group">
+                    <h4>Name</h4>
+               <input type="text" name="" id="name">
+                </div>
+            
+               <div class="form-group">
+                <h4>contact</h4>
+                <input type="tel" id="contact">
+               </div>
+            
+                <div class="form-group">
+                    <h4>Location</h4>
+                    <td><select id="location">
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+               
+                <div class="form-group">
+                    <h4>Email</h4>
+                <input type="text" id="email">
+                </div>
+            
+                <button type="button" class="btn" onclick="display()">Display</button>
+                
+                
+                </form>
+                <p id="p"></p>
+
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy;www.urbanstays.com. All rights reserved
+        </div>
+    </footer>
+   
+</body>
+</html>
